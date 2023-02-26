@@ -20,3 +20,5 @@ for i in range(N):
     if massa >= num_max:
         num_max = massa
 print(num_max, num_min)
+
+
