@@ -7,3 +7,5 @@ degree = 1
 while degree <= number:
     print(degree, end=" ")
     degree *= 2
+
+
