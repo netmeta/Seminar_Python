@@ -22,8 +22,13 @@
 # ноутбук
 #     12
 
-dictionary_eu = {'AEIOULNSTR': 1, 'DG': 2,
-                 'BCMP': 3, 'FHVWY': 4, 'K': 5, 'JX': 8, 'QZ': 10, }
+dictionary_eu = {1: 'AEIOULNSTR', 2: 'DG',
+                 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JX', 10: 'QZ', }
 
-dictionary_ru = {'АВЕИНОРСТ': 1, 'ДКЛМПУ': 2,
-                 'БГЁЬЯ': 3, 'ЙЫ': 4, 'ЖЗХЦЧ': 5, 'ШЭЮ': 8, 'ФЩЪ': 10}
+dictionary_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ',
+                 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+print(dictionary_eu)
+
+for item in dictionary_eu:
+    # print('{}:{}'.format(item, dictionary_eu[item]))
+    print(item)
