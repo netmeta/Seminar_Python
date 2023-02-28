@@ -22,13 +22,25 @@
 # ноутбук
 #     12
 
-dictionary_eu = {1: 'AEIOULNSTR', 2: 'DG',
-                 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JX', 10: 'QZ', }
+word = input('Enter a word: ').strip().upper()
+count = 0
 
-dictionary_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ',
-                 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
-print(dictionary_eu)
+dictionary = {"A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т": 1, "D, G, Д, К, Л, М, П, У": 2,
+              "B, C, M, P, Б, Г, Ё, Ь, Я": 3, "F, H, V, W, Y, Й, Ы": 4, "K, Ж, З, Х, Ц, Ч": 5, "J, X, Ш, Э, Ю": 8, "Q, Z, Ф, Щ, Ъ": 10}
 
-for item in dictionary_eu:
-    # print('{}:{}'.format(item, dictionary_eu[item]))
-    print(item)
+for i in word:
+    print(sum(dictionary.items()))
+
+
+
+# print(dictionary_eu)
+
+
+# for item in dictionary_eu:
+#     # print('{}:{}'.format(item, dictionary_eu[item]))
+#     print(item)
+
+#
+
+# for i in dictionary_eu:
+#     list(i.values())[0].strip()
