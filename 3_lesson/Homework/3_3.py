@@ -22,25 +22,11 @@
 # ноутбук
 #     12
 
-word = input('Enter a word: ').strip().upper()
+word = input('Enter a word: ')
 count = 0
 
-dictionary = {"A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т": 1, "D, G, Д, К, Л, М, П, У": 2,
-              "B, C, M, P, Б, Г, Ё, Ь, Я": 3, "F, H, V, W, Y, Й, Ы": 4, "K, Ж, З, Х, Ц, Ч": 5, "J, X, Ш, Э, Ю": 8, "Q, Z, Ф, Щ, Ъ": 10}
+dictionary = {"AEIOULNSTRАВЕИНОРСТ": 1, "DGДКЛМПУ": 2,
+              "BCMPБГЁЬЯ": 3, "FHVWYЙЫ": 4, "KЖЗХЦЧ": 5, "JXШЭЮ": 8, "QZФЩЪ": 10}
 
-for i in word:
-    print(sum(dictionary.items()))
-
-
-
-# print(dictionary_eu)
-
-
-# for item in dictionary_eu:
-#     # print('{}:{}'.format(item, dictionary_eu[item]))
-#     print(item)
-
-#
-
-# for i in dictionary_eu:
-#     list(i.values())[0].strip()
+print(sum([i[1] for i in dictionary.items()
+      for j in word if j.upper() in i[0]]))

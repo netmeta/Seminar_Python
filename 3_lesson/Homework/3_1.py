@@ -9,6 +9,8 @@
 #     3
 #     -> 1
 
+
+
 number = int(input("Input number of elements in array: "))
 list_1 = []
 
@@ -17,3 +19,13 @@ for i in range(1, number+1):
 
 print(list_1)
 print(list_1.count(int(input())))
+
+
+# Вариант из семинара
+from random import choices
+
+number = int(input("Input number of elements in array: "))
+list_nums = choices(range(number*2), k=number)
+print(list_nums)
+result = list_nums.count(int(input()))
+print(result)
