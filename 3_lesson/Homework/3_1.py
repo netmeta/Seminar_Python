@@ -21,7 +21,8 @@ print(list_1)
 print(list_1.count(int(input())))
 
 
-# Вариант из семинара
+# solution seminar
+
 from random import choices
 
 number = int(input("Input number of elements in array: "))

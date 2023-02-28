@@ -23,7 +23,8 @@ print(f"Closest element: {result}")
 result = min(arr, key=lambda y: abs(find_element - y))
 print(f"Closest element option 2: {result}")
 
-# Вариант из семинара
+# solution seminar
+
 list_nums = [randint(1, 50) for _ in range(int(input()))]
 
 print(list_nums)
