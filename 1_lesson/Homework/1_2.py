@@ -6,8 +6,9 @@
 # 24 -> 4  16  4
 #     60 -> 10  40  10
 
-s = int(input('Количество журавликов: '))
-if s % 6:
-    print("in correct")
+count = int(input('Enter number: '))
+
+if count % 6:
+    print("The data is incorrect!")
 else:
-    print((s//6), ((s//6)*4), (s//6))
+    print(f'Петя - {(count//6)}  \nКатя - {((count//6)*4)} \nСерёжа - {(count//6)}')

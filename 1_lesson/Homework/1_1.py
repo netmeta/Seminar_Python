@@ -2,10 +2,12 @@
 # *Пример:*
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0) |
-a = int(input('Введите трехзначное число: '))
-a1 = a % 10
-a2 = a % 100 // 10
-a3 = a // 100
-print("Сумма цифр числа:", a1+a2+a3)
 
+number = int(input('Enter number: '))
+sum_number = 0
 
+while number > 0:
+    sum_number += number % 10
+    number //= 10
+
+print("Sum of digits :", sum_number)

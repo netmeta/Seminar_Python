@@ -5,9 +5,9 @@
 # 3 2 4 -> yes
 # 3 2 1 -> no
 
-n = int(input('Длина: '))
-m = int(input('Высота: '))
-k = int(input('Дольки: '))
+n = int(input('Number of slices in length: '))
+m = int(input('Number of slices in width: '))
+k = int(input('How much to break off: '))
 if k < n * m and ((k % n == 0) or (k % m == 0)):
     print('YES')
 else:
