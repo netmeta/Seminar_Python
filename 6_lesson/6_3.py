@@ -7,6 +7,8 @@
 # Вводится список чисел.
 # Все числа списка находятся на разных строках.
 
+from time import time
+from random import choices
 # import random as rd
 
 # list_1 = [i for i in range(2, 10)]
@@ -42,3 +44,20 @@ for i in li:
         else:
             sum += a / 2
         print(f'i = {a / 2}, sum = {sum/4}')
+
+
+
+nums = [int(i) for i in input().split()]
+# nums = choices(range(3000), k=2000)
+
+# start = time()
+m_dict = {}.fromkeys(nums, 0)
+
+for j in nums:
+    m_dict[j] += 1
+
+num_count = [i // 2 for i in m_dict.values() if not i % 2]
+print(sum(num_count))
+
+
+# print(time() - start)
