@@ -17,3 +17,20 @@ if count_side > number // 2:
     count_side = number - count_side
 
 print(count_side)
+
+# solution 2
+
+n = int(input())
+count_zero = 0
+count_one = 0
+
+for i in range(n):
+    x = int(input())
+    if x == 0:
+        count_zero += 1
+    else:
+        count_one += 1
+if count_one > count_zero:
+    print(count_zero)
+else:
+    print(count_one)
