@@ -5,10 +5,13 @@
 # которая среди списка орбит планет найдет ту,
 # по которой вращается самая далекая планета.
 
+
 def find_farthest_orbit(nums_list):
     s_dict = {val[0] * val[1]: val for val in nums_list if val[0] != val[1]}
+    print(s_dict)
     return max(s_dict.items())[1]
 
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3), (11, 11)]
 print(*find_farthest_orbit(orbits))
+
