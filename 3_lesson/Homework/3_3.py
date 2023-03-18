@@ -22,12 +22,20 @@
 # ноутбук
 #     12
 
-word = input('Enter a word: ')
-count = 0
+word = input()
+summa = 0
 
 dictionary = {"AEIOULNSTRАВЕИНОРСТ": 1,
               "DGДКЛМПУ": 2,
               "BCMPБГЁЬЯ": 3,
               "FHVWYЙЫ": 4, "KЖЗХЦЧ": 5, "JXШЭЮ": 8, "QZФЩЪ": 10}
+
+for i in dictionary.items():
+    for j in word:
+        if j.upper() in i[0]:
+            sum += i[1]
+print(summa)
+
+# ----solution 2
 
 print(sum([i[1] for i in dictionary.items() for j in word if j.upper() in i[0]]))
