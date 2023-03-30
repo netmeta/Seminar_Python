@@ -4,40 +4,17 @@
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 # 4 -> 1 2 3 4
 # 9
-n = int(input())
-arr = list()
-for i in range(n):
-    x = int(input())
-    arr.append(x)
+from random import randint
 
-arr_count = list()
-for i in range(len(arr)-1):
-    arr_count.append(arr[i-1] + arr[i] + arr[i+1])
-arr_count.append(arr[-2] + arr[-1] + arr[0])
-print(max(arr_count))
+n = int(input('Введите кол-во кустов: '))
+shrub_list = [randint(1, 20) for i in range(n)]
+print(shrub_list)
+harvest_list = []
 
-# -----------------
+for i in range(len(shrub_list) - 1):
+    harvest_list.append(shrub_list[i - 1] + shrub_list[i] + shrub_list[i + 1])
+harvest_list.append(
+    shrub_list[-2] + shrub_list[len(shrub_list) - 1] + shrub_list[0])
 
-n = int(input())
-bushes = [int(i) for i in input().split()]
-bush_max = 0
-
-for i in range(n):
-    bush_sum = bushes[i - 1] + bushes[i] + bushes[i + 1 if i < n - 1 else 0]
-    if bush_sum > bush_max:
-        bush_max = bush_sum
-
-print(bush_max)
-
-# ----------------------------------
-
-n = int(input())
-bushes = [int(i) for i in input().split()]
-bush_max = 0
-
-for i in range(-1, n - 1):
-    bush_sum = bushes[i - 1] + bushes[i] + bushes[i + 1]
-    if bush_sum > bush_max:
-        bush_max = bush_sum
-
-print(bush_max)
+print(harvest_list)
+print(max(harvest_list))
