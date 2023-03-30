@@ -23,7 +23,7 @@
 #     12
 
 word = input()
-summa = 0
+summ = 0
 
 dictionary = {"AEIOULNSTRАВЕИНОРСТ": 1,
               "DGДКЛМПУ": 2,
@@ -34,8 +34,9 @@ for i in dictionary.items():
     for j in word:
         if j.upper() in i[0]:
             sum += i[1]
-print(summa)
+print(summ)
 
 # ----solution 2
 
-print(sum([i[1] for i in dictionary.items() for j in word if j.upper() in i[0]]))
+print(sum([i[1] for i in dictionary.items()
+      for j in word if j.upper() in i[0]]))
